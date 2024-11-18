@@ -36,7 +36,7 @@ void setup() {
 
   ClientRequests = "";
   WiFi.disconnect();
-  delay(3000);
+  delay(300);
   Serial.println("START");
 
   WiFi.begin("another","hah apah");
@@ -75,21 +75,19 @@ void loop() {
     Serial.println();
     Serial.println();
     digitalWrite(LED_RED, HIGH);
-    delay(1000);
+    delay(100);
   }else{
     Serial.print("Keterangan: ");
     Serial.print("LULUS");
     Serial.println();
     Serial.println();
     digitalWrite(LED_GREEN, HIGH);
-    delay(1000);
+    delay(100);
   }
 
   digitalWrite(LED_RED, LOW);
   digitalWrite(LED_GREEN, LOW);
   delay(50);
-
-  delay(500);
 
   client = server.available();
   ClientRequests = (ReadIncomingRequests());
